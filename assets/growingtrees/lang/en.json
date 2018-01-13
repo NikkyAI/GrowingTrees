@@ -1,0 +1,15 @@
+{
+	"block-branch-birch-*-*"  :  "Birch Branch" ,
+	"block-branch-oak-*-*"    :    "Oak Branch" ,
+	"block-branch-maple-*-*"  :  "Maple Branch" ,
+	"block-branch-pine-*-*"   :   "Pine Branch" ,
+	"block-branch-acacia-*-*" : "Acacia Branch" ,
+	"block-branch-kapok-*-*"  :  "Kapok Branch" ,
+	
+	"block-leafybranch-birch-*-*"  :  "Birch Leaves" ,
+	"block-leafybranch-oak-*-*"    :    "Oak Leaves" ,
+	"block-leafybranch-maple-*-*"  :  "Maple Leaves" ,
+	"block-leafybranch-pine-*-*"   :   "Pine Leaves" ,
+	"block-leafybranch-acacia-*-*" : "Acacia Leaves" ,
+	"block-leafybranch-kapok-*-*"  :  "Kapok Leaves" ,
+}

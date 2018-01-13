@@ -1,0 +1,100 @@
+{
+	code: "leafybranch",
+	behaviors: [
+		{ name: "growingtrees:Placement" },
+	],
+	variantgroups: [
+		{ loadFromProperties: "block/wood" },
+		{ code: "side", states: [ "down", "up", "north", "south", "west", "east" ] },
+		{ code: "size", states: [ "0", "1", "2", "3", "4" ] },
+	],
+	
+	drawtype: "json",
+	shapeByType: {
+		"*-down-*"  : { base: "block/leafybranch/{size}" },
+		"*-up-*"    : { base: "block/leafybranch/{size}", rotateX: 180 },
+		"*-north-*" : { base: "block/leafybranch/{size}", rotateX:  90 },
+		"*-south-*" : { base: "block/leafybranch/{size}", rotateX: 270 },
+		"*-west-*"  : { base: "block/leafybranch/{size}", rotateX:  90, rotateY:   0, rotateZ: 270 },
+		"*-east-*"  : { base: "block/leafybranch/{size}", rotateX:  90, rotateY: 180, rotateZ: 270 },
+	},
+	textures : {
+		log    : { base: "game:block/wood/bark/{wood}" },
+		leaves : { base: "game:block/wood/leaves/{wood}*" },
+	},
+	renderpass   : "OpaqueNoCull",
+	faceCullMode : "CollapseMaterial",
+	
+	collisionboxByType: {
+		"*-0": null,
+		"*-1": {
+			x1: 0.4375, y1: -0.4375, z1: 0.4375,
+			x2: 0.5625, y2:  0.5625, z2: 0.5625,
+			rotateXByType: { "*-down-*": 0, "*-up-*": 180, "*-south-*": 270, "*": 90 },
+			rotateYByType: { "*-east-*": 180, "*-west-*": 0 },
+			rotateZByType: { "*-east-*": 270, "*-west-*": 270 },
+		},
+		"*-2": {
+			x1: 0.3750, y1: -0.3750, z1: 0.3750,
+			x2: 0.6250, y2:  0.6250, z2: 0.6250,
+			rotateXByType: { "*-down-*": 0, "*-up-*": 180, "*-south-*": 270, "*": 90 },
+			rotateYByType: { "*-east-*": 180, "*-west-*": 0 },
+			rotateZByType: { "*-east-*": 270, "*-west-*": 270 },
+		},
+		"*-3": {
+			x1: 0.3125, y1: -0.3125, z1: 0.3125,
+			x2: 0.6875, y2:  0.6875, z2: 0.6875,
+			rotateXByType: { "*-down-*": 0, "*-up-*": 180, "*-south-*": 270, "*": 90 },
+			rotateYByType: { "*-east-*": 180, "*-west-*": 0 },
+			rotateZByType: { "*-east-*": 270, "*-west-*": 270 },
+		},
+		"*-4": {
+			x1: 0.2500, y1: -0.2500, z1: 0.2500,
+			x2: 0.7500, y2:  0.7500, z2: 0.7500,
+			rotateXByType: { "*-down-*": 0, "*-up-*": 180, "*-south-*": 270, "*": 90 },
+			rotateYByType: { "*-east-*": 180, "*-west-*": 0 },
+			rotateZByType: { "*-east-*": 270, "*-west-*": 270 },
+		},
+	},
+	selectionbox: {
+		x1: 0, y1: 0, z1: 0,
+		x2: 1, y2: 1, z2: 1,
+	},
+	
+	blockmaterial: "Leaves",
+	sounds: {
+		break : "block/plant",
+		place : "block/plant",
+		walk  : "walk/grass",
+	},
+	
+	creativeinventory: {
+		"general" : [ "leafybranch-*-down-*" ],
+		"flora"   : [ "leafybranch-*-down-*" ],
+	},
+	dropsByType: {
+		"*-0": [{ type: "block", code: "sapling-{wood}", quantity: { avg: 0.002 } }],
+		"*-1": [{ type: "block", code: "sapling-{wood}", quantity: { avg: 0.005 } }],
+		"*-2": [{ type: "block", code: "sapling-{wood}", quantity: { avg: 0.010 } }],
+		"*-3": [{ type: "block", code: "sapling-{wood}", quantity: { avg: 0.015 } }],
+		"*-4": [{ type: "block", code: "sapling-{wood}", quantity: { avg: 0.020 } }],
+	},
+	sideopaque      : { all: false },
+	sidesolid       : { all: false },
+	rainPermeable   : true,
+	lightAbsorption : 1,
+	materialDensity : 300,
+	
+	replaceableByType: {
+		"*-1": 4000,
+		"*-2": 1600,
+		"*-3": 1200,
+		"*-4": 800,
+	},
+	resistanceByType: {
+		"*-1": 0.5,
+		"*-2": 1.0,
+		"*-3": 2.0,
+		"*-4": 2.5,
+	},
+}

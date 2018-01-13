@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    
+    <AssemblyTitle>GrowingTrees</AssemblyTitle>
+    <Authors>copygirl</Authors>
+    <Version>0.1.0</Version>
+    
+    <Description>Vintage Story mod which adds trees that dynamically grow</Description>
+    <RepositoryUrl>https://github.com/copygirl/GrowingTrees</RepositoryUrl>
+    
+    <TargetFramework>net452</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    
+  </PropertyGroup>
+  <ItemGroup>
+    
+    <Reference Include="VintagestoryAPI">
+      <HintPath>$(VINTAGE_STORY)\VintagestoryAPI.dll</HintPath>
+    </Reference>
+    
+  </ItemGroup>
+  <Target Name="Copy" AfterTargets="PostBuildEvent">
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(VINTAGE_STORY)/Mods" />
+    <Copy SourceFiles="$(TargetDir)/$(TargetName).pdb" DestinationFolder="$(VINTAGE_STORY)/Mods" />
+  </Target>
+</Project>

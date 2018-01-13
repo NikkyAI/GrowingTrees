@@ -1,0 +1,30 @@
+{
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"elements": [{
+		"name": "Log",
+		"from": [  5.0, -5.0,  5.0 ],
+		"to"  : [ 11.0, 11.0, 11.0 ],
+		"faces": {
+			"north": { "texture": "#log", "uv": [ 5.0, 0.0, 11.0, 16.0 ] },
+			"east" : { "texture": "#log", "uv": [ 5.0, 0.0, 11.0, 16.0 ] },
+			"south": { "texture": "#log", "uv": [ 5.0, 0.0, 11.0, 16.0 ] },
+			"west" : { "texture": "#log", "uv": [ 5.0, 0.0, 11.0, 16.0 ] },
+			"up"   : { "texture": "#log", "uv": [ 5.0, 5.0, 11.0, 11.0 ] },
+			"down" : { "texture": "#log", "uv": [ 5.0, 5.0, 11.0, 11.0 ] }
+		}
+	},{
+		"name": "Leaves",
+		"from": [  0.0,  0.0,  0.0 ],
+		"to"  : [ 16.0, 16.0, 16.0 ],
+		"tintIndex": 1,
+		"faces": {
+			"north": { "texture": "#leaves", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
+			"east" : { "texture": "#leaves", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
+			"south": { "texture": "#leaves", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
+			"west" : { "texture": "#leaves", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
+			"up"   : { "texture": "#leaves", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
+			"down" : { "texture": "#leaves", "uv": [ 0.0, 0.0, 16.0, 16.0 ] }
+		}
+	}]
+}
