@@ -1,0 +1,10 @@
+
+{
+	"type": "core",
+	"name": "GrowingTrees",
+	"description" : "Adds trees which grow dynamically",
+	"website": "https://github.com/copygirl/GrowingTrees",
+	"author": "copygirl",
+	"version": "0.1.0",
+	"gameversions": [ "1.5.0.4+" ]
+}

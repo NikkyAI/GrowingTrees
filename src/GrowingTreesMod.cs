@@ -14,7 +14,6 @@ namespace GrowingTrees
 			Description = "Adds trees which grow dynamically",
 			Website     = "https://github.com/copygirl/GrowingTrees",
 			Author      = "copygirl",
-			Version     = "0.1.0",
 		};
 		
 		
