@@ -64,9 +64,10 @@
 	
 	blockmaterial: "Leaves",
 	sounds: {
-		break : "block/plant",
-		place : "block/plant",
-		walk  : "walk/grass",
+		break : "game:block/plant",
+		place : "game:block/plant",
+		hit   : "game:block/plant",
+		walk  : "game:walk/grass",
 	},
 	
 	creativeinventory: {
@@ -74,11 +75,11 @@
 		"flora"   : [ "leafybranch-*-down-*" ],
 	},
 	dropsByType: {
-		"*-0": [{ type: "block", code: "sapling-{wood}", quantity: { avg: 0.002 } }],
-		"*-1": [{ type: "block", code: "sapling-{wood}", quantity: { avg: 0.005 } }],
-		"*-2": [{ type: "block", code: "sapling-{wood}", quantity: { avg: 0.010 } }],
-		"*-3": [{ type: "block", code: "sapling-{wood}", quantity: { avg: 0.015 } }],
-		"*-4": [{ type: "block", code: "sapling-{wood}", quantity: { avg: 0.020 } }],
+		"*-0" : [{ type: "block", code: "game:sapling-{wood}", quantity: { avg: 0.02 } }],
+		"*-1" : [{ type: "block", code: "game:sapling-{wood}", quantity: { avg: 0.05 } }],
+		"*-2" : [{ type: "block", code: "game:sapling-{wood}", quantity: { avg: 0.08 } }],
+		"*-3" : [{ type: "block", code: "game:sapling-{wood}", quantity: { avg: 0.10 } }],
+		"*-4" : [{ type: "block", code: "game:sapling-{wood}", quantity: { avg: 0.10 } }],
 	},
 	sideopaque      : { all: false },
 	sidesolid       : { all: false },
@@ -87,15 +88,17 @@
 	materialDensity : 300,
 	
 	replaceableByType: {
-		"*-1": 4000,
-		"*-2": 1600,
-		"*-3": 1200,
-		"*-4": 800,
+		"*-0" : 4000,
+		"*-1" : 1600,
+		"*-2" : 1200,
+		"*-3" : 800,
+		"*-4" : 750,
 	},
 	resistanceByType: {
-		"*-1": 0.5,
-		"*-2": 1.0,
-		"*-3": 2.0,
-		"*-4": 2.5,
+		"*-0" : 0.5,
+		"*-1" : 0.6,
+		"*-2" : 0.7,
+		"*-3" : 0.8,
+		"*-4" : 0.9,
 	},
 }
