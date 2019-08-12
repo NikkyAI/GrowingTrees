@@ -1,7 +1,8 @@
 {
 	code: "leafybranch",
 	behaviors: [
-		{ name: "growingtrees:Placement" },
+		{ name: "growingtrees:BranchPlacement" },
+		{ name: "growingtrees:LeavesBreaking" },
 	],
 	variantgroups: [
 		{ loadFromProperties: "block/wood" },
