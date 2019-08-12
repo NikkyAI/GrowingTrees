@@ -17,8 +17,8 @@ namespace GrowingTrees
 		public override void Start(ICoreAPI api)
 		{
 			api.RegisterBlockBehaviorClass(
-				BlockBehaviorPlacement.NAME,
-				typeof(BlockBehaviorPlacement));
+				BranchPlacementBehavior.NAME,
+				typeof(BranchPlacementBehavior));
 		}
 	}
 }

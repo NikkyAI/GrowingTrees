@@ -5,13 +5,13 @@ using Vintagestory.API.Server;
 
 namespace GrowingTrees
 {
-	public class BlockBehaviorPlacement : BlockBehavior
+	public class BranchPlacementBehavior : BlockBehavior
 	{
 		public static string NAME { get; }
-			= $"{ GrowingTreesSystem.MOD_ID }:Placement";
+			= $"{ GrowingTreesSystem.MOD_ID }:BranchPlacement";
 		
 		
-		public BlockBehaviorPlacement(Block block)
+		public BranchPlacementBehavior(Block block)
 			: base(block) {  }
 		
 		public override bool TryPlaceBlock(

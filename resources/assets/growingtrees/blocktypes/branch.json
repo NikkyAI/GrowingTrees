@@ -1,6 +1,6 @@
 {
 	code: "branch",
-	behaviors: [ { name: "growingtrees:Placement" } ],
+	behaviors: [ { name: "growingtrees:BranchPlacement" } ],
 	variantgroups: [
 		{ loadFromProperties: "block/wood" },
 		{ code: "side", states: [ "down", "up", "north", "south", "west", "east" ] },
