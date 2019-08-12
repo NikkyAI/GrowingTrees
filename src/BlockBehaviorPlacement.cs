@@ -8,7 +8,7 @@ namespace GrowingTrees
 	public class BlockBehaviorPlacement : BlockBehavior
 	{
 		public static string NAME { get; }
-			= $"{ GrowingTreesMod.MOD_INFO.Name.ToLower() }:Placement";
+			= $"{ GrowingTreesSystem.MOD_ID }:Placement";
 		
 		
 		public BlockBehaviorPlacement(Block block)
@@ -16,8 +16,8 @@ namespace GrowingTrees
 		
 		public override bool TryPlaceBlock(
 			IWorldAccessor world, IPlayer byPlayer,
-			IItemStack itemstack, BlockSelection blockSel,
-			ref EnumHandling handling)
+			ItemStack itemstack, BlockSelection blockSel,
+			ref EnumHandling handling, ref string failureCode)
 		{
 			handling = EnumHandling.PreventDefault;
 			var blockAtPosition = world.BlockAccessor.GetBlock(blockSel.Position);
@@ -30,7 +30,7 @@ namespace GrowingTrees
 			var placedAsset = this.block.CodeWithParts(wood, side, size);
 			
 			var placedBlock = world.BlockAccessor.GetBlock(placedAsset);
-			placedBlock.DoPlaceBlock(world, blockSel.Position, blockSel.Face);
+			placedBlock.DoPlaceBlock(world, blockSel.Position, blockSel.Face, itemstack);
 			return true;
 		}
 	}
